@@ -10,11 +10,29 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: Outlets
+    // ------------------------
+    @IBOutlet weak var counterLabel: UILabel!
+    
+    // MARK: Variables
+    // ------------------------
+    var phoneCounter:Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("---PHONE APP LOADED!")
     }
 
-
+    
+    // MARK: Custom Functions
+    // ------------------------
+    @IBAction func phoneButtonPressed(_ sender: UIButton) {
+        
+        print("PHONE BUTTON PRESSED")
+        self.phoneCounter = self.phoneCounter + 1;
+        self.counterLabel.text = "Counter: \(self.phoneCounter)"
+        
+    }
+    
 }
 
