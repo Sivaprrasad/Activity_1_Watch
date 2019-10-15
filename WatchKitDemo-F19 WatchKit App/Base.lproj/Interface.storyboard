@@ -24,12 +24,30 @@
                         <label alignment="left" text="Output goes here" id="jdw-NX-QHL">
                             <color key="textColor" red="0.26861357689999998" green="1" blue="0.064526446160000001" alpha="1" colorSpace="deviceRGB"/>
                         </label>
+                        <button width="1" alignment="left" title="Go to Page 2" id="ZLy-A0-89u">
+                            <color key="backgroundColor" name="selectedContentBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            <connections>
+                                <segue destination="ZNE-M9-EU2" kind="push" id="6ih-Vm-bbk"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
                         <outlet property="outputLabel" destination="jdw-NX-QHL" id="pUW-Pl-ZIn"/>
                     </connections>
                 </controller>
             </objects>
+            <point key="canvasLocation" x="-24" y="194"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="30I-aW-Kaf">
+            <objects>
+                <controller id="ZNE-M9-EU2">
+                    <items>
+                        <label alignment="left" text="This is page 2" id="8DS-li-xhH"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="231" y="194"/>
         </scene>
     </scenes>
 </document>
