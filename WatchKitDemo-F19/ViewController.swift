@@ -39,6 +39,19 @@ class ViewController: UIViewController, WCSessionDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("---PHONE APP LOADED!")
+        
+        // @TODO: Does the phone support communication with the watch?
+        if (WCSession.isSupported() == true) {
+            sendMessageOutputLabel.text = "WC is supported!"
+            
+            // create a communication session with the watch
+            let session = WCSession.default
+            session.delegate = self
+            session.activate()
+        }
+        else {
+            sendMessageOutputLabel.text = "WC NOT supported!"
+        }
     }
 
     
