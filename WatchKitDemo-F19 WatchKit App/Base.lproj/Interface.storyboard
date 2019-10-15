@@ -21,6 +21,9 @@
                                 <action selector="watchButtonPressed" destination="AgC-eL-Hgc" id="WDX-1e-WU8"/>
                             </connections>
                         </button>
+                        <label alignment="left" text="Output goes here" id="jdw-NX-QHL">
+                            <color key="textColor" red="0.26861357689999998" green="1" blue="0.064526446160000001" alpha="1" colorSpace="deviceRGB"/>
+                        </label>
                     </items>
                 </controller>
             </objects>
