@@ -38,10 +38,10 @@
             </objects>
             <point key="canvasLocation" x="-24" y="194"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Page2 Interface Controller-->
         <scene sceneID="30I-aW-Kaf">
             <objects>
-                <controller id="ZNE-M9-EU2">
+                <controller id="ZNE-M9-EU2" customClass="Page2InterfaceController" customModule="WatchKitDemo_F19_WatchKit_Extension">
                     <items>
                         <label alignment="left" text="This is page 2" id="8DS-li-xhH"/>
                     </items>

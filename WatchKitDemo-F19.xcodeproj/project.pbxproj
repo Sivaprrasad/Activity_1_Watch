@@ -19,6 +19,7 @@
 		9B477E2623561D1900E431F5 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B477E2523561D1900E431F5 /* InterfaceController.swift */; };
 		9B477E2823561D1900E431F5 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B477E2723561D1900E431F5 /* ExtensionDelegate.swift */; };
 		9B477E2A23561D1900E431F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B477E2923561D1900E431F5 /* Assets.xcassets */; };
+		9B8040B7235628F9004A5CD0 /* Page2InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8040B6235628F9004A5CD0 /* Page2InterfaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		9B477E2723561D1900E431F5 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		9B477E2923561D1900E431F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B477E2B23561D1900E431F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B8040B6235628F9004A5CD0 /* Page2InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page2InterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 				9B477E2723561D1900E431F5 /* ExtensionDelegate.swift */,
 				9B477E2923561D1900E431F5 /* Assets.xcassets */,
 				9B477E2B23561D1900E431F5 /* Info.plist */,
+				9B8040B6235628F9004A5CD0 /* Page2InterfaceController.swift */,
 			);
 			path = "WatchKitDemo-F19 WatchKit Extension";
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B8040B7235628F9004A5CD0 /* Page2InterfaceController.swift in Sources */,
 				9B477E2823561D1900E431F5 /* ExtensionDelegate.swift in Sources */,
 				9B477E2623561D1900E431F5 /* InterfaceController.swift in Sources */,
 			);
