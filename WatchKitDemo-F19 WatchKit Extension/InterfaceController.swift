@@ -28,5 +28,21 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
+    
+    // MARK: Custom functions
+
+    // Do something when user presses watch button
+    @IBAction func watchButtonPressed() {
+        print("I CLICKED THE BUTTON")
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 }
