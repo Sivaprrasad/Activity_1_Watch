@@ -7,8 +7,24 @@
 //
 
 import UIKit
+import WatchConnectivity  // built in library for making Phone <> Watch communication work
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, WCSessionDelegate {
+    
+    // Built-in methods for dealing with communication between Watch <> Phone
+    // ------------------------------------------------
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        
+    }
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        
+    }
+    
 
     // MARK: Outlets
     // ------------------------
