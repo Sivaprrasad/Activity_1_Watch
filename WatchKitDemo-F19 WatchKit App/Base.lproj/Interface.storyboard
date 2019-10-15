@@ -30,8 +30,10 @@
                                 <segue destination="ZNE-M9-EU2" kind="push" id="6ih-Vm-bbk"/>
                             </connections>
                         </button>
+                        <label alignment="left" text="MSG FROM PHONE" id="X97-if-Uu2"/>
                     </items>
                     <connections>
+                        <outlet property="msgFromPhoneLabel" destination="X97-if-Uu2" id="Jgk-D1-deV"/>
                         <outlet property="outputLabel" destination="jdw-NX-QHL" id="pUW-Pl-ZIn"/>
                     </connections>
                 </controller>

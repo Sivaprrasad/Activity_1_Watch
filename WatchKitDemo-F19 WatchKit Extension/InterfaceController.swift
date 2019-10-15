@@ -17,6 +17,11 @@ class InterfaceController: WKInterfaceController {
     // Label for output
     @IBOutlet weak var outputLabel: WKInterfaceLabel!
     
+    // Message from phone goes in this label
+    
+    @IBOutlet weak var msgFromPhoneLabel: WKInterfaceLabel!
+    
+    
     // MARK: Variables
     var count:Int = 0
     
