@@ -69,12 +69,24 @@ class ViewController: UIViewController, WCSessionDelegate {
     @IBAction func sendMessageButton(_ sender: Any) {
         print("Sending message to watch")
         // ------ SEND MESSAGE TO WATCH CODE GOES HERE
-
+        if (WCSession.default.isReachable == true) {
+            // Here is the message you want to send to the watch
+            // All messages get sent as dictionaries
+            let message = ["name":"Pritesh"]
+            
+            // Send the message
+            WCSession.default.sendMessage(message, replyHandler:nil)
+            messageCounter = messageCounter + 1
+            sendMessageOutputLabel.text = "Message Sent \(messageCounter)"
+        }
+        else {
+            messageCounter = messageCounter + 1
+            sendMessageOutputLabel.text = "Cannot reach watch! \(messageCounter)"
+        }
         
         
         // -----------------------------------------------
-        messageCounter = messageCounter + 1
-        sendMessageOutputLabel.text = "Message Sent \(messageCounter)"
+        
     }
     
     
