@@ -39,6 +39,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                 <state key="normal" title="Click to Send"/>
+                                <connections>
+                                    <action selector="sendMessageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H0Z-4K-6cL"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Send Message to Watch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDn-74-fnA">
                                 <rect key="frame" x="20" y="418" width="380" height="41"/>
@@ -67,6 +70,7 @@
                     </view>
                     <connections>
                         <outlet property="counterLabel" destination="6gh-Lk-r8q" id="Dux-v1-agW"/>
+                        <outlet property="sendMessageOutputLabel" destination="jad-G4-YDY" id="27b-ou-UQG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
