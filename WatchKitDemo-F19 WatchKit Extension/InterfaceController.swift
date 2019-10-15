@@ -8,9 +8,15 @@
 
 import WatchKit
 import Foundation
+import WatchConnectivity // need this to send mesasges between Phone and Watch
 
 
-class InterfaceController: WKInterfaceController {
+class InterfaceController: WKInterfaceController, WCSessionDelegate {
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        // this function receives messages from the watch
+    }
+    
 
     // MARK: Outlets
     
@@ -35,6 +41,20 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         print("---WATCH APP LOADED")
+        
+        if (WCSession.isSupported() == true) {
+            msgFromPhoneLabel.setText("WC is supported!")
+            
+            // create a communication session with the phone
+            let session = WCSession.default
+            session.delegate = self
+            session.activate()
+        }
+        else {
+            msgFromPhoneLabel.setText("WC NOT supported!")
+        }
+        
+        
     }
     
     override func didDeactivate() {
