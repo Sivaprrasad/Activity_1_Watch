@@ -14,9 +14,30 @@ import WatchConnectivity // need this to send mesasges between Phone and Watch
 class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        // this function receives messages from the watch
+        
     }
     
+    // Function to receive DICTIONARY from the watch
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+        // Output message to terminal
+        print("WATCH: I received a message: \(message)")
+        
+        // Get the "name" key out of the dictionary
+        // and show it in the label
+        let name = message["name"] as! String
+        msgFromPhoneLabel.setText(name)
+        
+//
+//        message["name"] ---> Pritesh
+//
+//
+//        var person = {"name":"pritesh", "age":"25", "id":"C02343"}
+//        console.log(person["name"]) ---> "Pritesh"
+//        console.log(person["id"]) ---> "C02343"
+//
+        
+        
+    }
 
     // MARK: Outlets
     
