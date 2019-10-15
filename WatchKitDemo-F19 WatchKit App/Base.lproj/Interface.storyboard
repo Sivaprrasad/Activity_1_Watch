@@ -25,6 +25,9 @@
                             <color key="textColor" red="0.26861357689999998" green="1" blue="0.064526446160000001" alpha="1" colorSpace="deviceRGB"/>
                         </label>
                     </items>
+                    <connections>
+                        <outlet property="outputLabel" destination="jdw-NX-QHL" id="pUW-Pl-ZIn"/>
+                    </connections>
                 </controller>
             </objects>
         </scene>

@@ -12,6 +12,11 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
+    // MARK: Outlets
+    
+    // Label for output
+    @IBOutlet weak var outputLabel: WKInterfaceLabel!
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
@@ -34,6 +39,7 @@ class InterfaceController: WKInterfaceController {
     // Do something when user presses watch button
     @IBAction func watchButtonPressed() {
         print("I CLICKED THE BUTTON")
+        self.outputLabel.setText("LMAO!")
     }
     
     
