@@ -17,6 +17,9 @@ class InterfaceController: WKInterfaceController {
     // Label for output
     @IBOutlet weak var outputLabel: WKInterfaceLabel!
     
+    // MARK: Variables
+    var count:Int = 0
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
@@ -39,7 +42,8 @@ class InterfaceController: WKInterfaceController {
     // Do something when user presses watch button
     @IBAction func watchButtonPressed() {
         print("I CLICKED THE BUTTON")
-        self.outputLabel.setText("LMAO!")
+        self.count = self.count + 1
+        self.outputLabel.setText("LMAO! \(self.count)")
     }
     
     
