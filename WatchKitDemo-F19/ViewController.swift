@@ -72,7 +72,9 @@ class ViewController: UIViewController, WCSessionDelegate {
         if (WCSession.default.isReachable == true) {
             // Here is the message you want to send to the watch
             // All messages get sent as dictionaries
-            let message = ["name":"Pritesh"]
+            let message = ["name":"Pritesh",
+                           "age":35,
+                           "id":"C071234"] as [String : Any]
             
             // Send the message
             WCSession.default.sendMessage(message, replyHandler:nil)

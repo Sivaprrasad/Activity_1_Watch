@@ -25,7 +25,9 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         // Get the "name" key out of the dictionary
         // and show it in the label
         let name = message["name"] as! String
-        msgFromPhoneLabel.setText(name)
+        let age = message["age"] as! Int
+        let id = message["id"] as! String
+        msgFromPhoneLabel.setText(id)
         
 //
 //        message["name"] ---> Pritesh
