@@ -25,19 +25,11 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         // Get the "name" key out of the dictionary
         // and show it in the label
         let name = message["name"] as! String
-        let age = message["age"] as! Int
-        let id = message["id"] as! String
-        msgFromPhoneLabel.setText(id)
+        let color = message["color"] as! String
         
-//
-//        message["name"] ---> Pritesh
-//
-//
-//        var person = {"name":"pritesh", "age":"25", "id":"C02343"}
-//        console.log(person["name"]) ---> "Pritesh"
-//        console.log(person["id"]) ---> "C02343"
-//
-        
+        msgFromPhoneName.setText(name)
+        msgFromPhoneColor.setText(color)
+
         
     }
 
@@ -48,8 +40,9 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
     // Message from phone goes in this label
     
-    @IBOutlet weak var msgFromPhoneLabel: WKInterfaceLabel!
+    @IBOutlet weak var msgFromPhoneName: WKInterfaceLabel!
     
+    @IBOutlet weak var msgFromPhoneColor: WKInterfaceLabel!
     
     // MARK: Variables
     var count:Int = 0
@@ -66,7 +59,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         print("---WATCH APP LOADED")
         
         if (WCSession.isSupported() == true) {
-            msgFromPhoneLabel.setText("WC is supported!")
+            msgFromPhoneName.setText("WC is supported!")
             
             // create a communication session with the phone
             let session = WCSession.default
@@ -74,7 +67,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             session.activate()
         }
         else {
-            msgFromPhoneLabel.setText("WC NOT supported!")
+            msgFromPhoneName.setText("WC NOT supported!")
         }
         
         
@@ -88,10 +81,20 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     // MARK: Custom functions
 
     // Do something when user presses watch button
-    @IBAction func watchButtonPressed() {
-        print("I CLICKED THE BUTTON")
-        self.count = self.count + 1
-        self.outputLabel.setText("LMAO! \(self.count)")
+    
+    @IBAction func sendMessageToPhoneButton() {
+        print("Sending message to Phone")
+               // ------ SEND MESSAGE TO WATCH CODE GOES HERE
+               if (WCSession.default.isReachable == true) {
+                   // Here is the message you want to send to the watch
+                   // All messages get sent as dictionaries
+                   let message = ["name":"Pritesh",
+                   "age":"18"] as [String : Any]
+                   
+                   // Send the message
+               WCSession.default.sendMessage(message, replyHandler:nil)
+                  
+               }
     }
     
     
